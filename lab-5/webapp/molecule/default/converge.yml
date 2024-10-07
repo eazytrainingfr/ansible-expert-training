@@ -6,4 +6,9 @@
       include_role:
         name: "webapp"
       vars:
-        target_dir: "{%- if ansible_distribution == 'CentOS' -%}/usr/share/nginx/html{%- elif ansible_distribution == 'Ubuntu' -%}/var/www/html{%- endif %}"
+        target_dir: >-
+          {%- if ansible_distribution == 'CentOS' -%}
+            /usr/share/nginx/html
+          {%- elif ansible_distribution == 'Ubuntu' -%}
+            /var/www/html
+          {%- endif %}

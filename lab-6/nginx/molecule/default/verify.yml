@@ -5,6 +5,6 @@
   hosts: all
   gather_facts: false
   tasks:
-  - name: test url
-    uri:
-      url: http://localhost
+    - name: test url
+      uri:
+        url: http://localhost

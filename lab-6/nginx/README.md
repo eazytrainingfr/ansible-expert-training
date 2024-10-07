@@ -1,5 +1,3 @@
-[![CI](https://github.com/diranetafen/ansible-role_nginx/workflows/CI/badge.svg?event=push)](https://github.com/diranetafen/ansible-role_nginx/actions?query=workflow%3ACI)
-
 Role Name
 =========
 
@@ -38,4 +36,3 @@ Author Information
 ------------------
 
 An optional section for the role authors to include contact information, or a website (HTML is not allowed).
-# ansible-role_nginx

@@ -1,5 +1,5 @@
 ---
 - role: nginx
-  src: https://github.com/diranetafen/ansible-role_nginx.git
+  src: https://github.com/Aurelie-Kamgang/ansible-expert-role_nginx.git
   version: main
   scm: git
