@@ -6,11 +6,6 @@ driver:
 lint: |
   set -e
   yamllint -c molecule/default/.yamllint .
-<<<<<<< HEAD
-#  ansible-lint -x meta-incorrect,meta-no-info,package-latest,yaml
-=======
-#ansible-lint -x meta-incorrect,meta-no-info,package-latest,yaml
->>>>>>> 2bdd0f55e5c120d62f00efe7e3942a3f62ebf75f
 platforms:
   - name: instance-centos
     image: "eazytraining/diveintoansible:centos"
