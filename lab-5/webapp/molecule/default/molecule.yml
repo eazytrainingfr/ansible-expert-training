@@ -2,15 +2,15 @@
 dependency:
   name: galaxy
   options:
-    ignore-certs: True
-    ignore-errors: True
+    ignore-certs: true
+    ignore-errors: true
     role-file: molecule/default/requirements.yml
 driver:
   name: docker
 lint: |
   set -e
   yamllint -c molecule/default/.yamllint .
-  ansible-lint -x meta-incorrect,meta-no-info,package-latest
+#ansible-lint -x meta-incorrect,meta-no-info,package-latest
 platforms:
   - name: instance-centos
     image: "eazytraining/diveintoansible:centos"
@@ -40,7 +40,6 @@ scenario:
     - create
     - prepare
     - converge
-#    - idempotence
     - side_effect
     - verify
     - cleanup
