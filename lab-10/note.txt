@@ -1,0 +1,11 @@
+## Navigate to the lab3/solution directory to call the collection instead of the role, and type:
+mkdir collections
+## Create the requirements.yml file to specify the repository of the collection to use:
+vi collections/requirements.yml
+
+## Test
+ansible-galaxy install -r collections/requirements.yml
+
+## Remove the tag
+cd ansible-collection-webapp/eazytraining/webapp
+git push --delete origin 1.0.0
