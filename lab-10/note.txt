@@ -6,6 +6,8 @@ vi collections/requirements.yml
 ## Test
 ansible-galaxy install -r collections/requirements.yml
 
+## We will encounter an error stating that the manifest.json file is missing, and therefore the repository will not be recognized as a collection.
+
 ## Remove the tag
 cd ansible-collection-webapp/eazytraining/webapp
 git push --delete origin 1.0.0
