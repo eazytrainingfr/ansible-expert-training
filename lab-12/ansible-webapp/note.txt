@@ -1,0 +1,39 @@
+## Setting Up Inventory and Project on Tower
+
+1. Navigate to:
+   - **Project** -> **Name** -> **Organization** = Git  
+   - **SCM URL** = Repository URL of the playbook  
+   - **Branch** = main -> Save
+
+2. Create the credentials:
+   - **Type** = Machine  
+   - **Username** = ansible  
+   - **Password** = password  
+
+3. Configure the inventory:
+   - **Name** -> Save  
+   - **Source** -> **Name** -> **Source** = From project  
+   - **Inventory file** = hosts  
+
+## Creating the Job and Deploying the Application
+
+1. Navigate to:
+   - **Template** -> **Job Template** -> **Name**  
+   - **Job Type** = Run  
+   - **Inventory**  
+   - **Project**  
+   - **Playbook**  
+   - **Credentials** -> Save  
+
+2. Launch the deployment.
+
+## Setting Up the Pipeline with Ansible Tower CLI and GitHub Actions
+
+1. Copy the content of `lab-12/.github/workflows/ci.yml`.
+2. Paste it into the workflows directory of your playbook repository.
+3. Trigger the pipeline.
+
+## Retrieving the Tower Job Status
+
+- Ensure the workflow includes the options:  
+  `--wait` and `--monitor`.
