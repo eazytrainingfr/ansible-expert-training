@@ -1,0 +1,25 @@
+#Creation of collection
+
+##In the home directory of ubuntu-c, type the following commands:
+mkdir ansible-collection-webapp
+cd ansible-collection-webapp
+ansible-galaxy collection init eazytraining.webapp
+ls
+cd eazytraining/webapp
+ls roles
+ls plugins
+cat galaxy.yml
+
+## Creating submodules from roles
+cd ansible-collection-webapp/eazytraining/webapp/
+git init ## Make sure you are in this directory; this allows you to manage versioning with Git.
+cd ansible-collection-webapp/eazytraining/webapp/roles
+git submodule add repo sub_module_name ## For nginx
+ls
+git submodule add repo sub_module_name ## For webapp
+ls
+git status
+git add
+git commit
+## create repository
+git push

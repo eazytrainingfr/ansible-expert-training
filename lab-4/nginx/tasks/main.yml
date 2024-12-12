@@ -16,10 +16,9 @@
   tags:
     - install-nginx
 
-- name: Restart nginx
+- name: Enable nginx
   service:
     name: nginx
-    state: restarted
-  notify: Check HTTP Service
-  tags:
-    - always
+    enabled: true
+
+

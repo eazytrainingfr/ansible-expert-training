@@ -1,0 +1,18 @@
+## Creating a GitHub Token for My Account
+- Navigate to:  
+  **Settings -> Developer Settings -> Personal access tokens (classic) -> Grant all permissions -> Generate Token**
+
+## Creating a Secret in the Nginx Repository to Store the Token
+- Add the generated token as a secret in the nginx and webapp repositories
+
+---
+
+## Writing the Workflow for the Nginx Role
+- Create the file `.github/workflows/update.yml` and copy the content from `lab-11/ansible-role_nginx/.github/workflows/update.yml` into it.  
+- Apply the changes and ensure the variables in the file are correctly specified.
+
+---
+
+## Writing the Workflow for the Webapp Role
+- Create the file `.github/workflows/update.yml` and copy the content from `lab-11/ansible-webapp_nginx/.github/workflows/update.yml` into it.  
+- Apply the changes and ensure the variables in the file are correctly specified.

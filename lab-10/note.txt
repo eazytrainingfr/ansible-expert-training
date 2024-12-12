@@ -1,0 +1,59 @@
+## Navigate to the lab3/solution directory to call the collection instead of the role, and type:
+mkdir collections
+## Create the requirements.yml file to specify the repository of the collection to use:
+vi collections/requirements.yml
+
+## Test
+ansible-galaxy install -r collections/requirements.yml
+
+## We will encounter an error stating that the manifest.json file is missing, and therefore the repository will not be recognized as a collection.
+
+## Remove the tag
+cd ansible-collection-webapp/eazytraining/webapp
+git push --delete origin 1.0.0
+
+
+## Steps to Generate and Test the Collection
+
+### Generate the `manifest.json`
+- The `manifest.json` file is required by `ansible-galaxy` to describe the collection.  
+- Each time the collection evolves, update the `galaxy.yml` file accordingly.  
+
+### Create the Collection Archive
+- Modify the workflow: `release.yml` by copying the content from `lab-10/.github/workflows/release.yml` into your own workflows file.  
+
+```bash
+cd ansible-collection-webapp/eazytraining/webapp  
+git add .  
+git commit -m "update pipeline to add build"  
+git push origin main --force  
+git tag 1.0.0  
+git push origin 1.0.0  
+
+
+## Verify Pipeline Execution
+- Check if the pipeline runs successfully.
+- Verify the release and ensure the `manifest.json` file is present, as it is required by `ansible-galaxy`.
+
+```bash
+cd lab-3/solution
+## Update the URL where it retrieves the release
+ansible-galaxy install -r collections/requirements.yml
+
+
+## Customize the Playbook
+- Adapt the playbook to perform the desired operations:
+  - Copy the content of the playbook located at `lab-10/ansible-webapp/nginx_webapp_playbook.yaml` into the playbook for your project.
+
+### Remove the Roles
+- Delete the existing roles:
+```bash
+rm -r webapp nginx
+
+### Re-run the Playbook
+- Execute the playbook to apply the desired changes:
+```bash
+Relancer le playbook
+ansible-playbook -i hosts nginx_webapp_playbook.yml
+
+## Publish the Code on GitHub

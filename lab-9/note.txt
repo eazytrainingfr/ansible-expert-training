@@ -1,0 +1,12 @@
+## creation of pipeline
+.github/workflows/releases.yml
+
+# Release production
+## In ubuntu-c
+cd ansible-collection-webapp/eazytrainingfr/webapp
+git pull
+git tag 1.0.0
+git tag
+git push origin tag 1.0.0
+
+## Verify the pipeline launch in the repository and ensure the release is produced. 

@@ -6,7 +6,7 @@ cd ~/.awx/awxcompose/
 # vi docker-compose.yml
 #########################################################
 
-version: '2'
+version: '3'
 services:
 
   web:
@@ -103,4 +103,4 @@ networks:
     name: diveinto.io
 #########################################################
 
-docker-compose up -d
+docker compose up -d

@@ -14,16 +14,16 @@ lint: |
 platforms:
   - name: instance-centos
     image: "eazytraining/diveintoansible:centos"
-    command: "/lib/systemd/systemd"
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    #command: "/lib/systemd/systemd"
+    #volumes:
+    #  - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
     pre_build_image: true
   - name: instance-ubuntu
     image: "eazytraining/diveintoansible:ubuntu"
-    command: "/lib/systemd/systemd"
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    #command: "/lib/systemd/systemd"
+    #volumes:
+    #  - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
     pre_build_image: true
 provisioner:
