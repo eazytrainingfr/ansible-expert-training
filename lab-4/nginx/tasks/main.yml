@@ -21,4 +21,5 @@
     name: nginx
     enabled: true
 
-
+- name: Start nginx
+  shell: /usr/sbin/nginx &
